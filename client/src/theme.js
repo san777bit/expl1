@@ -1,8 +1,8 @@
-// CSE8603 | Bidaulet Sanzhar | 080327554084 | niche-18
-// Seed: ID2=84, M=3, L=B=2
-// Hue    = (84*11 + 3*17) mod 360 = 975 mod 360 = 255
-// Accent = (255 + 55 + 2) mod 360 = 312
-export const seed = { hue: 255, accent: 312 };
+export const seed = {
+  hue: 255,
+  accent: 312,
+  niche: 18,
+};
 
 export const theme = {
   primary: `hsl(${seed.hue}, 65%, 42%)`,
@@ -13,7 +13,6 @@ export const theme = {
   watermark: 'CSE8603 | Bidaulet Sanzhar | 080327554084 | niche-18',
 };
 
-// Copies the seed colors into CSS variables on :root, so every CSS file can use var(--primary)
 export function applyTheme() {
   const root = document.documentElement;
   root.style.setProperty('--primary', theme.primary);
